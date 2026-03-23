@@ -3,6 +3,7 @@ import Features     from "../components/Features";
 import AboutSection from "../components/AboutSection";
 import Events       from "../components/Events";
 import Testimonials from "../components/Testimonials";
+import OurAim from '../components/OurAim'
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <Features />
         <AboutSection />
+        <OurAim />
         <Events />
         <Testimonials />
       </main>

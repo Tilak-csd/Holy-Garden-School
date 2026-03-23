@@ -1,13 +1,13 @@
 import { GraduationCap, MapPin, Phone, Mail, ChevronRight, CheckCircle, Facebook, Instagram, Youtube, Twitter, ArrowRight } from "lucide-react";
 
-const quickLinks = ["About Us", "Admission", "Academics", "Faculty", "Gallery", "Events", "Contact"];
-const programs   = ["Science (Grades 11–12)", "Management (Gr. 11–12)", "Humanities (Gr. 11–12)", "Secondary (Gr. 6–10)", "Hostel Boarding", "ECA Programs"];
-const socials    = [Facebook, Instagram, Youtube, Twitter];
+const quickLinks = ["About Us", "Admission", "Academics", "Gallery", "Events", "Contact"];
+const programs = ["ECD", "Primary Level (Gr. 1-5)", "Lower Secondary (Gr. 6-8)", "Secondary (Gr. 9–10"];
+const socials = [Facebook, Instagram, Youtube, Twitter];
 
 const contactItems = [
-  { icon: <MapPin size={16} />,  label: "Address", value: "Ring Road, Balaju, Kathmandu, Bagmati Province, Nepal" },
-  { icon: <Phone size={16} />,   label: "Phone",   value: "+977-1-4350123 / 4350456" },
-  { icon: <Mail size={16} />,    label: "Email",   value: "info@holygarden.edu.np" },
+  { icon: <MapPin size={16} />, label: "Address", value: "Ring Road, Balaju, Kathmandu, Bagmati Province, Nepal" },
+  { icon: <Phone size={16} />, label: "Phone", value: "+977-1-4350123 / 4350456" },
+  { icon: <Mail size={16} />, label: "Email", value: "info@holygarden.edu.np" },
 ];
 
 export default function Footer() {
@@ -66,15 +66,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-              <div
+              <img
+                src="./holy-garden-boarding-high-school.png" alt=""
                 style={{
-                  width: 48, height: 48, borderRadius: "50%",
-                  background: "linear-gradient(135deg,#1E40AF,#15803D)",
+                  width: 52, height: 52, borderRadius: "50%",
                   display: "flex", alignItems: "center", justifyContent: "center",
-                }}
-              >
-                <GraduationCap size={24} color="#fff" />
-              </div>
+                }} />
+
               <div>
                 <div style={{ color: "#fff", fontWeight: 800, fontSize: 15 }}>Holy Garden</div>
                 <div style={{ color: "#94a3b8", fontWeight: 600, fontSize: 11, letterSpacing: 1 }}>
@@ -173,9 +171,6 @@ export default function Footer() {
                 <div key={i} style={{ display: "flex", gap: 12 }}>
                   <div style={{ color: "#15803D", flexShrink: 0, marginTop: 2 }}>{c.icon}</div>
                   <div>
-                    <div style={{ color: "#64748b", fontSize: 11, fontWeight: 600, letterSpacing: 0.5, marginBottom: 2 }}>
-                      {c.label.toUpperCase()}
-                    </div>
                     <div style={{ color: "#cbd5e1", fontSize: 13, fontWeight: 500, lineHeight: 1.5 }}>
                       {c.value}
                     </div>
@@ -183,17 +178,33 @@ export default function Footer() {
                 </div>
               ))}
 
-              {/* Map placeholder */}
+              {/* Map container */}
               <div
                 style={{
-                  marginTop: 8, borderRadius: 12, overflow: "hidden", height: 100,
+                  marginTop: 8,
+                  borderRadius: 12,
+                  overflow: "hidden",
+                  height: 100, // Increased height so the map is actually visible
                   background: "linear-gradient(135deg,rgba(30,64,175,0.3),rgba(21,128,61,0.3))",
                   border: "1px solid rgba(255,255,255,0.1)",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  gap: 8, color: "#94a3b8", fontSize: 13,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 8,
+                  color: "#94a3b8",
+                  fontSize: 13,
                 }}
               >
-                <MapPin size={16} color="#15803D" /> Ring Road, Balaju, Kathmandu
+                <iframe
+                  title="Google Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95196.90948510704!2d85.23117750690477!3d27.740096540266805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18dc925125ad%3A0x40f12c087ec35f90!2sHoly%20Garden%20Boarding%20High%20School!5e1!3m2!1sen!2snp!4v1774265142543!5m2!1sen!2snp"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }} // Corrected style object
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -212,7 +223,7 @@ export default function Footer() {
           }}
         >
           <p style={{ color: "#475569", fontSize: 13, fontWeight: 500 }}>
-            © 2024 Holy Garden Boarding High School. All rights reserved. Ring Road, Balaju, Kathmandu.
+            © 2026 Holy Garden Boarding High School. All rights reserved. Developed By <a href="https://www.unifiedsolutions.com.np" target="_blank">Unified Solutions</a>
           </p>
           <div style={{ display: "flex", gap: 24 }}>
             {["Privacy Policy", "Terms of Use", "Sitemap"].map((l) => (

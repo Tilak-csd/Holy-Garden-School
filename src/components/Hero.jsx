@@ -15,9 +15,8 @@ const stagger = {
 };
 
 const stats = [
-  { value: "28+", label: "Years of Excellence" },
+  { value: "49+", label: "Years of Excellence" },
   { value: "98%", label: "Pass Rate" },
-  { value: "1200+", label: "Alumni Worldwide" },
   { value: "45+", label: "Expert Faculty" },
 ];
 
